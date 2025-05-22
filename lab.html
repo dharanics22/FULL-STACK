@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="class2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-archive user-icon"></i>
+                <h2 class="sidebar-title">Resource Portal</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="page1.html" class="menu-item active">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <h3>Venues</h3>
+                <a href="class2.html" class="menu-item">
+                    <i class="fas fa-chalkboard"></i> Classrooms
+                </a>
+                <a href="lab.html" class="menu-item">
+                    <i class="fas fa-flask"></i> Labs
+                </a>
+                <a href="seminar.html" class="menu-item">
+                    <i class="fas fa-door-open"></i> Seminar Halls
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-building"></i> Auditorium
+                </a>
+                <a href="emergency.html" class="menu-item">
+                    <i class="fas fa-exclamation-triangle"></i> Emergency
+                </a>
+                <h3>Other</h3>
+                <a href="login.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <header class="header">
+                <h1>LABS</h1>
+                <div class="profile-icon">D</div>
+            </header>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search for labs">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="block-select">
+                <label for="block">Select the Block:</label>
+                <select id="block">
+                    <option value="ib-block" data-target="ib-labs">IB Block</option>
+                    <option value="as-block" data-target="as-labs">AS Block</option>
+                    <option value="sf-block" data-target="sf-labs">SF Block</option>
+                    <option value="mech-block" data-target="me-labs">Mech Block</option>
+                </select>
+            </div>
+
+            <!-- Lab Cards -->
+            <section id="ib-labs" class="classroom-grid">
+                <div class="classroom-card not-booked">
+                    <h3>EIE LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-booked">Booked</span></p>
+                </div>
+                <div class="classroom-card not-booked">
+                    <h3>EEE LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-not-booked">Not Booked</span></p>
+                </div>
+                <!-- Add more lab cards as needed -->
+            </section>
+
+            <section id="as-labs" class="classroom-grid" style="display: none;">
+                <div class="classroom-card not-booked">
+                    <h3>CSBS LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-booked">Booked</span></p>
+                </div>
+                <div class="classroom-card not-booked">
+                    <h3>ISE LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-not-booked">Not Booked</span></p>
+                </div>
+            </section>
+
+            <section id="sf-labs" class="classroom-grid" style="display: none;">
+                <div class="classroom-card not-booked">
+                    <h3>IT LAB-1</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-booked">Booked</span></p>
+                </div>
+                <div class="classroom-card not-booked">
+                    <h3>CS LAB-2</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-not-booked">Not Booked</span></p>
+                </div>
+                <!-- Add more lab cards as needed -->
+            </section>
+
+            <section id="me-labs" class="classroom-grid" style="display: none;">
+                <div class="classroom-card not-booked">
+                    <h3>CAD LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-not-booked">Not Booked</span></p>
+                </div>
+                <div class="classroom-card not-booked">
+                    <h3>CT LAB</h3>
+                    <p>Capacity: 60</p>
+                    <p>Status: <span class="status-booked">Booked</span></p>
+                </div>
+            </section>
+        </div>
+    </div>
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book Lab</h2>
+        <form id="bookingForm">
+            <label for="bookingDate">Date:</label>
+            <input type="date" id="bookingDate" required><br><br>
+            
+            <label for="bookingTime">Time:</label>
+            <input type="time" id="bookingTime" required><br><br>
+            
+            <label for="bookingYear">Year:</label>
+            <input type="text" id="bookingYear" required><br><br>
+            
+            <label for="bookingDepartment">Department:</label>
+            <input type="text" id="bookingDepartment" required><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="bookingMessage" style="color: green; display: none;">Successfully booked!</p>
+    </div>
+</div>
+
+    <script src="class2.js"></script>
+</body>
+</html>

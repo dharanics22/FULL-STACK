@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Portal</title>
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="page1.css">
+    <style>
+        .user-icon {
+            font-size: 2em; /* Increase icon size */
+            margin-right: 10px; /* Add space between icon and text */
+            vertical-align: middle; /* Align icon with text */
+        }
+        
+        .menu-item {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc; /* Add border around each menu item */
+            background-color: #f8f8f8;
+            transition: background-color 0.3s ease;
+        }
+        
+        .menu-item.active {
+            background-color: #ddd;
+        }
+
+        .menu-item:hover {
+            background-color: #e0e0e0; /* Change background on hover */
+        }
+
+        .menu-item i {
+            margin-right: 10px;
+            font-size: 1.2em; /* Icon size adjustment */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-archive user-icon"></i> 
+                <h2 class="sidebar-title">Resource Portal</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="admin1.html" class="menu-item active">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <h3>Venues</h3>
+                <a href="adminclass2.html" class="menu-item">
+                    <i class="fas fa-chalkboard"></i> Classrooms
+                </a>
+                <a href="adminlab2.html" class="menu-item">
+                    <i class="fas fa-flask"></i> Labs
+                </a>
+                <a href="adminseminar2.html" class="menu-item">
+                    <i class="fas fa-door-open"></i> Seminar Halls
+                </a>
+                <a href="adminseminar2.html" class="menu-item">
+                    <i class="fas fa-building"></i> Auditorium
+                </a>
+                <h3>Other</h3>
+                <a href="login.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <header class="header">
+                <h1>Welcome Back Admin!</h1>
+                <div class="profile-icon">A</div>
+            </header>
+            <section class="venues">
+                <h2>My Venues</h2>
+                <div class="venue-cards">
+                    <a href="adminclass1.html" class="card">
+                        <img src="images/classroom.jpg" alt="Classrooms">
+                        <div class="card-title">Classrooms</div>
+                        <div class="progress-bar"><div class="progress"></div></div>
+                    </a>
+                    <a href="adminlab.html" class="card">
+                        <img src="images/labs.jpg" alt="Labs">
+                        <div class="card-title">Labs</div>
+                        <div class="progress-bar"><div class="progress"></div></div>
+                    </a>                    
+                    <a href="adminseminar.html" class="card">
+                        <img src="images/seminar.jpg" alt="Seminar halls">
+                        <div class="card-title">Seminar halls</div>
+                        <div class="progress-bar"><div class="progress"></div></div>
+                    </a>
+                    <a href="adminaudi.html" class="card">
+                        <img src="images/audi.jpg" alt="Auditorium">
+                        <div class="card-title">Auditorium</div>
+                        <div class="progress-bar"><div class="progress"></div></div>
+                </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

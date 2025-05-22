@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Booking System</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Title with Icon -->
+        <div class="title-container">
+            <img src="images/user.png" alt="Resource Icon">
+            <h1>RESOURCE BOOKING SYSTEM</h1>
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter username">
+                <img src="images/user3.jpg" alt="Username Icon">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Enter password">
+                <span class="toggle-password" onclick="togglePasswordVisibility()">&#128065;</span>
+            </div>
+            <div class="forget-password-container">
+                <div class="left-section">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <a href="#">Forget password?</a>
+            </div>
+            <button type="submit">Sign In</button>
+            <p class="separator">OR</p>
+            <button class="google-signin">
+                <img src="images/icon3.png" alt="Google Icon">
+                Sign in with Google
+            </button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Existing CSS styles */
+.user-icon {
+    font-size: 2em; /* Increase icon size */
+    margin-right: 10px; /* Add space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; /* Add border around each menu item */
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item.active {
+    background-color: #ddd;
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 1.2em; /* Icon size adjustment */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar-title {
+    font-size: 1.5em;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+.menu-item.active {
+    background-color: #ddd;
+}
+
+.sidebar-menu h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    color: #888;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #6f6fef;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.venues h2 {
+    margin-bottom: 20px;
+}
+
+.venue-cards {
+    display: flex;
+    gap: 20px;
+}
+
+/* New CSS rule to remove underline from card links */
+a.card {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensure text color is inherited */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #eee;
+    margin: 0 10px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #6f6fef;
+    width: 50%; /* Adjust this percentage to match the progress */
+}

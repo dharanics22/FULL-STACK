@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="class2.css">
+    <style>
+        /* Emergency Booking Form Styling */
+        .booking-form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .booking-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .booking-form select:focus,
+        .booking-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .booking-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .booking-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-archive user-icon"></i>
+                <h2 class="sidebar-title">Resource Portal</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="page1.html" class="menu-item">
+                    <i class="fas fa-th-large"></i> Dashboard
+                </a>
+                <h3>Venues</h3>
+                <a href="class2.html" class="menu-item">
+                    <i class="fas fa-chalkboard"></i> Classrooms
+                </a>
+                <a href="lab.html" class="menu-item">
+                    <i class="fas fa-flask"></i> Labs
+                </a>
+                <a href="seminar.html" class="menu-item">
+                    <i class="fas fa-door-open"></i> Seminar Halls
+                </a>
+                <a href="#" class="menu-item">
+                    <i class="fas fa-building"></i> Auditorium
+                </a>
+                <a href="emergency.html" class="menu-item active">
+                    <i class="fas fa-exclamation-triangle"></i> Emergency
+                </a>
+                <h3>Other</h3>
+                <a href="login.html" class="menu-item">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </a>
+            </nav>
+        </div>
+
+        <!-- Emergency Booking Form -->
+        <div class="booking-form">
+            <h2>Book a Venue</h2>
+            <form action="submit_booking.php" method="POST">
+                <label for="venue">Select Venue:</label>
+                <select id="venue" name="venue" required>
+                    <option value="" disabled selected>Select a venue</option>
+                    <option value="classroom">Classroom</option>
+                    <option value="lab">Lab</option>
+                    <option value="auditorium">Auditorium</option>
+                </select>
+
+                <label for="timing">Available Timing:</label>
+                <select id="timing" name="timing" required>
+                    <option value="" disabled selected>Select available timing</option>
+                    <option value="9am-10am">9 AM - 10 AM</option>
+                    <option value="10am-11am">10 AM - 11 AM</option>
+                    <option value="11am-12pm">11 AM - 12 PM</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <label for="details">Additional Details:</label>
+                <textarea id="details" name="details" rows="4" placeholder="Enter any additional details..."></textarea>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
